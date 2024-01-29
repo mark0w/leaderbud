@@ -1,0 +1,46 @@
+.lb {
+
+  &-layout {
+    height: 100vh;
+  }
+
+  &-content-body {
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - #{64px});
+
+    &-wrapper {
+      min-width: 600px;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &-header {
+    position: sticky;
+    width: 100%;
+    // add common variables in the future (standard mat-toolbar height)
+    //height: 64px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.lb-sidenav-container {
+  // minus header height, will add variables soon :)
+  height: calc(100vh - #{64px});
+  overflow: hidden;
+}
+
+.lb-sidenav {
+  z-index: 6;
+}

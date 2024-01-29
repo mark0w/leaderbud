@@ -1,0 +1,43 @@
+<div class="lb-layout">
+  <header class="lb-header">
+    <mat-toolbar>
+      <div class="lb-header-left">
+        <button mat-icon-button (click)="toggleSidenav()">
+          <mat-icon>
+            menu
+          </mat-icon>
+        </button>
+
+      </div>
+
+    </mat-toolbar>
+
+  </header>
+  <mat-sidenav-container class="lb-sidenav-container">
+    <mat-sidenav #sidenav [opened]="isSidenavOpened" mode="side" class="lb-sidenav">
+      <mat-list>
+        <mat-nav-list>
+          <ng-container *ngFor="let sidenavItem of sidenavItems">
+            <a
+              mat-list-item
+              (click)="redirectToPage(sidenavItem.path)"
+              matRipple
+            >
+              <span>{{ sidenavItem.name }}</span>
+            </a>
+          </ng-container>
+
+        </mat-nav-list>
+      </mat-list>
+    </mat-sidenav>
+    <div class="lb-content">
+      <main cdkScrollable class="lb-content-body">
+        <div class="lb-content-body-wrapper">
+          <router-outlet></router-outlet>
+        </div>
+
+      </main>
+      <lb-footer></lb-footer>
+    </div>
+  </mat-sidenav-container>
+</div>
