@@ -16,6 +16,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { MatTableModule } from '@angular/material/table';
+import { LeaderboardOverviewCardComponent } from './views/leaderboards/leaderboard-overview-card/leaderboard-overview-card.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NgOptimizedImage } from '@angular/common';
+import { GridComponent } from './shared/components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     StatisticsComponent,
     SettingsComponent,
     LeaderboardsComponent,
-    FooterComponent
+    FooterComponent,
+    LeaderboardOverviewCardComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,11 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatRippleModule
+    MatRippleModule,
+    MatTableModule,
+    MatCardModule,
+    MatGridListModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

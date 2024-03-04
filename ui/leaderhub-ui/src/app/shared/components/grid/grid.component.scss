@@ -1,0 +1,36 @@
+.grid-wrapper {
+  container: dynamic-grid / inline-size;
+}
+
+.grid {
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.tiny {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.small {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.medium {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.big {
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.large {
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+}
+
+@container dynamic-grid (max-width: 800px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
