@@ -1,1 +1,12 @@
-<p>leaderboards works!</p>
+<div>
+  <button mat-raised-button>some add button here or there</button>
+
+  <div class="leaderboard-overviews">
+    <app-grid [size]="'big'">
+      <ng-container *ngFor="let leaderboard of leaderboards">
+        <app-leaderboard-overview-card [leaderboard]="leaderboard"></app-leaderboard-overview-card>
+      </ng-container>
+
+    </app-grid>
+  </div>
+</div>
