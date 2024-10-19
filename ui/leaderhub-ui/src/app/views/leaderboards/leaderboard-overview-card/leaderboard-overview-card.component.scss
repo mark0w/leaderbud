@@ -1,12 +1,15 @@
 .leaderboard-element {
   padding-top: 30px;
   position: relative;
-
   display: flex;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .leaderboard-card {
-  padding-top: 100px;
   position: relative;
   width: 100%;
   height: 100%;
