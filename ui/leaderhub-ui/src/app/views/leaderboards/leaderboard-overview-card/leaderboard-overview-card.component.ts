@@ -15,5 +15,6 @@ export class LeaderboardOverviewCardComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.leaderboard)
     this.leaderboard.imageUrl = "assets/test-images/image%20(2).png"
+    this.leaderboard.backgroundUrl = "assets/test-images/image%20(1).png"
   }
 }
